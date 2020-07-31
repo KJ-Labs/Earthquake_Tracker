@@ -8,13 +8,14 @@ function printDailyQuakes(event) {
     console.log(event.detail);
 }
 
-function printQuakesBySearch(event) {
-    console.log(event.detail);
+function printQuakesBySearch(event2) {
+    console.log(event2.detail.length);
 }
+
 
 var map;
 var infowindow;
-var apiKey = '9bdca107dee44c8d90c4efabb9b500e4';
+
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -23,21 +24,14 @@ function initMap() {
     mapTypeId: 'terrain'
   });
   infowindow = new google.maps.InfoWindow();
-  // Create a <script> tag and set the USGS URL as the source.
-  var script = document.createElement('script');
-  // This example uses a local copy of the GeoJSON stored at
-  // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-  script.src = `https://api.opencagedata.com/geocode/v1/json?q=${place}&key=${apiKey}`
-  document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-
-window.eqfeed_callback = function(results) {
-  for (var i = 0; i < results.features.length; i++) {
-    var coords = results.features[i].geometry.coordinates;
-    var text = '' + results.features[i].properties.place + '';
+window.eqfeed_callback = function printDailyQuakes(event) {
+  for (var i = 0; i < event.detail.length; i++) {
+    console.log(event.detail.length)
+    var coords = event.detail[i].coords;
+    var text = '' + event.detail[i].place + '';
     var latLng = new google.maps.LatLng(coords[1], coords[0]);
-
     var marker = new google.maps.Marker({
       position: latLng,
       map: map
