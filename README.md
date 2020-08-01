@@ -19,7 +19,7 @@ We utilized the usgs.gov, the google maps and the opencage geocoding APIs to pul
 Matt W. and Joo H. designed the HTML and CSS, allowing for a clean and polished interface. 
 Melinda I. and Kelsey J. created the earthquake, the google maps and the opencage geocoding API integrations that power the website.
 
-In the future, we want to pull earthquakes based off the user's IP address, so we can display the last 5 earthquakes in their area, so that citizens are informed of what's really going on underground.
+In the future, we want to pull earthquakes based off the user's searched magnitude, so that citizens are informed of what's really going on underground.
 
 Link to Website: https://kj-labs.github.io/Earthquake_Tracker/
 

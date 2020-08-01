@@ -3,7 +3,6 @@ document.addEventListener('dailyQuakes', renderPastHourQuakes, false);
 document.addEventListener('quakesBySearch', renderQuakesBySearch, false);
 
 $("#search").on("click", function(event) {
-
     event.preventDefault();
     const location = $("#location").val().trim();
     const startDate = $("#startDate").val().trim();
@@ -18,6 +17,7 @@ function getdailyQuakes() {
             const lastHourQuakes = collectData(response.features);
             const event = new CustomEvent('dailyQuakes', {detail: lastHourQuakes});
             document.dispatchEvent(event);
+            (response, status) => console.log(`Request failed. Returned status: ${status}, response: ${JSON.stringify(response)}`)
         });
 }
 
@@ -94,7 +94,8 @@ function placeToCordinates(place, startDate, endDate, radius) {
                 radius,
                 startDate,
                 endDate
-            )
+            ),
+            (response, status) => console.log(`Request failed. Returned status: ${status}, response: ${JSON.stringify(response)}`)
         );
 }
 
@@ -104,5 +105,6 @@ function dataByLocation(lat, lon, radius, startDate, endDate) {
             const quakesBySearch = collectData(response.features);
             const event = new CustomEvent('quakesBySearch', {detail: quakesBySearch});
             document.dispatchEvent(event);
+            (response, status) => console.log(`Request failed. Returned status: ${status}, response: ${JSON.stringify(response)}`)
         });
 }
