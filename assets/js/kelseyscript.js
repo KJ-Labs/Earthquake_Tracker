@@ -3,13 +3,28 @@
 document.addEventListener('dailyQuakes', printDailyQuakes, false);
 document.addEventListener('quakesBySearch', printQuakesBySearch, false);
 
-
+//This sets the formatting for the map for either function, but centers the map on the US once it loads.
+var map;
+var infowindow;
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 3.6,
+        center: new google.maps.LatLng(39.8283, -99.5795),
+        mapTypeId: 'terrain'
+    });
+    infowindow = new google.maps.InfoWindow();
+}
+//Variable to put red searched markers into local storage, so it can be cleared when they research.
+var gmarkers = [];
 
 // This section is to clear the local storage, so that the user can restart.
 document.getElementById("clearButton").addEventListener("click", function () {
-    localStorage.clear();
-    location.reload();
-    console.log('clear_button_working')
+    removeMarker();
+});
+
+// This section is to clear the last searched city markers.
+document.getElementById("search").addEventListener("click", function () {
+    removeMarker();
 });
 
 //Function is to setup pin colors for each function
@@ -27,6 +42,7 @@ function pinSymbol(color) {
 //The below is to place coordinates for the quakes that occurred within the last hour
 //Map shows data to avoid blank spots, while the user figures out where they want to search.
 function printDailyQuakes(event) {
+    removeMarker();
     for (var i = 0; i < event.detail.length; i++) {
         var coords = event.detail[i].coords;
         var text = 'Most Recent Rumbles - Location: ' + event.detail[i].place + ' Magnitude: ' + event.detail[i].mag + '' + ' Date: ' + event.detail[i].time + ' ';
@@ -34,9 +50,10 @@ function printDailyQuakes(event) {
         var marker = new google.maps.Marker({
             position: latLng,
             map: map,
+            center: new google.maps.LatLng(coords[1], coords[0]),
             icon: pinSymbol("#1AC8DB")
         });
-
+        gmarkers.push(marker);
         //This adds the marker based on the last five quakes
         marker.addListener('click', (function (marker, text) {
             return function (e) {
@@ -47,7 +64,6 @@ function printDailyQuakes(event) {
     }
 }
 
-
 //This is to get data for earthquakes that the user searches for rather than just the most recent quakes.
 function printQuakesBySearch(event) {
     for (var i = 0; i < event.detail.length; i++) {
@@ -57,11 +73,11 @@ function printQuakesBySearch(event) {
         var marker = new google.maps.Marker({
             position: latLng,
             map: map,
-            zoom: 4,
-            center:  latLng,
+            center: new google.maps.LatLng(coords[1], coords[0]),
             mapTypeId: 'terrain',
             icon: pinSymbol("#FF424E")
         });
+        gmarkers.push(marker);
         //This adds the marker based on the user's search parameters
         marker.addListener('click', (function (marker, text) {
             return function (e) {
@@ -72,16 +88,16 @@ function printQuakesBySearch(event) {
     }
 }
 
-//This sets the formatting for the map for either function, but centers the map on the US once it loads.
-var map;
-var infowindow;
-function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 3.6,
-        center: new google.maps.LatLng(39.8283, -99.5795),
-        mapTypeId: 'terrain'
-    });
-    infowindow = new google.maps.InfoWindow();
+
+//This is to remove the red markers for the previously searched city.
+//The blue last 5 rumble markers remain.
+function removeMarker() {
+    if (gmarkers.length > 0) {
+        for (var i = 0; i < gmarkers.length; i++) {
+            if (gmarkers[i] != null) {
+                gmarkers[i].setMap(null);
+            }
+        }
+    }
+    gmarkers = [];
 }
-
-
