@@ -1,6 +1,8 @@
+/* Google Font API */
 @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Rubik+Mono+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Lexend+Exa&family=Rubik+Mono+One&display=swap');
 
+/* Body Styling with Border */
 body {
     background-color: rgb(215, 252, 251);
     font-family: 'Lexend Exa', sans-serif;
@@ -8,6 +10,7 @@ body {
     padding: 30px;
 }
 
+/* Background Image Source: https://pixabay.com/photos/earthquake-seismograph-seismic-wave-3167693/  */
 header {
     background-image: url(../imgs/earthquake.jpg);
     background-size: cover;
@@ -19,12 +22,14 @@ header {
     border: solid rgb(219, 134, 134);
 }
 
+/* Shooketh to the Core Styling */
 header h1 {
     text-align: center;
     font:90px 'Faster One', cursive;
     text-shadow: 3px 3px rgb(219, 134, 134);
 }
 
+/* 5 Most Recent Rumbles Styling */
 h2 {
     text-align: center;
     font-size: 40px;
@@ -33,9 +38,9 @@ h2 {
     padding: 30px;
     margin-bottom: 20px;
     font-weight: bold;
-
 }
 
+/* Did you feel that? Styling */
 h3 {
     text-transform: uppercase;
     text-align: center;
@@ -49,20 +54,24 @@ h3 {
 
 }
 
+/* Learn More Styling */
 h4 {
     text-align: center;
     margin: 1rem 0 1rem 0;
     font-size: large;
 }
 
+/* Results parameter */
 p {
     margin-bottom: 2px;
 }
 
+/* Start and End Date Styling */
 em {
     font-size: medium;
 }
 
+/* Most Recent Results */
 .lastFive {
     text-align: center;
     font-size: x-large;
@@ -76,6 +85,8 @@ em {
 .queryInstructions {
     font-size: medium;
 }
+
+/* Button Effects Styling */
 .button {
     position: relative;
     background-color: #b3c0b4;
@@ -112,6 +123,7 @@ em {
     transition: 0s
 }
 
+/* Query Results */
 .quakeQuery, .quakeResults {
     text-align: left;
     padding: 20px;
@@ -123,27 +135,32 @@ em {
     margin: 0 0 0.75rem 0;
 }
 
+/* Query Results */
 .quakeResults {
     height: auto;
 }
 
+/* Query Results */
 .latest {
     font-size: 17px;
     text-align: center;
     padding-bottom: 20px;
 }
 
+/* Query Results */
 .row {
     grid-column-gap: 1em;
     grid-row-gap: 1em;
 }
 
+/* Google Map API Query Results */
 #map {
     height: 650px;
     border: solid rgb(219,134,134);
     width: 100%;
 }
 
+/* footer */
 footer {
     border: solid rgb(219,134,134);
     color:  rgb(121, 158, 157);
@@ -153,6 +170,7 @@ footer {
     padding: 20px;
 }
 
+/* Results Bold and Underline for Location, Magnitude and Time */
 .dataLabel {
     font-weight: bold;
     text-decoration: underline;

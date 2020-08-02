@@ -21,6 +21,9 @@ We created an interactive website to help concerned citizens see where earthquak
 We utilized the usgs.gov, google maps and opencage geocoding APIs to pull and display earthquake data. 
 
 Matt W. and Joo H. designed the HTML and CSS, allowing for a clean and polished interface. 
+We utilized Materialize CSS, Google Font API and deployed background image from Pixabay:
+https://pixabay.com/photos/earthquake-seismograph-seismic-wave-3167693/
+
 Melinda I. and Kelsey J. created the earthquake, the google maps and the opencage geocoding API integrations that power the website.
 
 In the future, we want to pull earthquakes based off the user's searched magnitude, so that citizens are informed of what's really going on underground.
