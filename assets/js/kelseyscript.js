@@ -17,6 +17,8 @@ function initMap(lat = 39.8283, lon = -99.5795) {
 var gmarkers = [];
 document.getElementById('clearButton').addEventListener("click", function () {
     removeMarker();
+    $('#searchResults').html('');
+    $('#searchErrors').html('');
 
 });
 
@@ -30,7 +32,7 @@ function pinSymbol(color) {
         strokeWeight: 2,
         scale: 1,
     };
-}
+};
 
 //The below is to place coordinates for the last 5 quakes and changes marker color to blue.
 function printDailyQuakes(event) {
@@ -55,7 +57,7 @@ function printDailyQuakes(event) {
             }
         })(marker, text));
     }
-}
+};
 
 //This is to get data for earthquakes that the user searches for and changes marker color to red.
 function printQuakesBySearch(event) {
@@ -81,7 +83,7 @@ function printQuakesBySearch(event) {
             }
         })(marker, text));
     }
-}
+};
 
 //This is to remove all markers
 function removeMarker() {
@@ -93,4 +95,4 @@ function removeMarker() {
         }
     }
     gmarkers = [];
-}
+};

@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Rubik+Mono+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Lexend+Exa&family=Rubik+Mono+One&display=swap');
 
+
+* {
+    box-sizing: border-box;
+    }
+
+
 /* Body Styling with Border Color */
 body {
     background-color: rgb(215, 252, 251);
@@ -26,9 +32,9 @@ header h1 {
     z-index: 1;
 }
 
-img {
+.header img {
     height: auto;
-    width: 100%;
+    width: 50px;
     opacity: 0.5;
     z-index: -1;
 }
@@ -39,7 +45,6 @@ h2 {
     font-size: 40px;
     line-height: 1px;
     vertical-align: text-top;
-    padding: 30px;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -179,3 +184,17 @@ footer {
     font-weight: bold;
     text-decoration: underline;
 }
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
