@@ -43,10 +43,10 @@ Kelsey J. Melinda I. Joo H. and Matt W.
 
 ## Questions
 - If you have any questions, please contact me on Github.
-- [KJ-Labs](https://github.com/KJ-Labs)
-- [Joo] (https://github.com/djjoo007)
-- [Melinda] (https://github.com/jnsmelinda)
-- [Matt] (https://github.com/wilbur125)
+- [Kelsey](https://github.com/KJ-Labs)
+- [Joo](https://github.com/djjoo007)
+- [Melinda](https://github.com/jnsmelinda)
+- [Matt](https://github.com/wilbur125)
 ## Repository
 
 - [Project Repo](https://github.com/KJ-Labs/Earthquake_Tracker)
