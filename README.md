@@ -27,7 +27,7 @@ The purpose of this project was to create an interactive website to help concern
 
 ## Installation
 
-        Go to https://kj-labs.github.io/Earthquake_Tracker/
+        Go to [Earthquake Tracker](https://kj-labs.github.io/Earthquake_Tracker/) https://kj-labs.github.io/Earthquake_Tracker/ 
 
 ## Usage
 
