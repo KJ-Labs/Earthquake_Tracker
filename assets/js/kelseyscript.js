@@ -8,8 +8,8 @@ var infowindow;
 function initMap(lat = 39.8283, lon = -99.5795) {
     map = new google.maps.Map(document.getElementById('map'), {
         center: new google.maps.LatLng(lat, lon),
-        zoom: 5,
-        mapTypeId: 'terrain'
+        zoom: 4,
+        mapId: 'e4562264712bec6'
     });
     infowindow = new google.maps.InfoWindow();
 }
@@ -31,8 +31,9 @@ function pinSymbol(color) {
         fillColor: color,
         fillOpacity: 1,
         strokeColor: '#000',
-        strokeWeight: 2,
+        strokeWeight: 3,
         scale: 1,
+
     };
 };
 
@@ -41,14 +42,14 @@ function printDailyQuakes(event) {
     initMap(event.detail[0].coords[1], event.detail[0].coords[0]);
     for (var i = 0; i < 6; i++) {
         var coords = event.detail[i].coords;
-        var text = '5 Most Recent Rumbles - Location: ' + event.detail[i].place + ' Magnitude: ' + event.detail[i].mag + '' + ' Date: ' + event.detail[i].time + ' ';
+        var text = 'Most Recent Rumbles - Location: ' + event.detail[i].place + ' Magnitude: ' + event.detail[i].mag + '' + ' Date: ' + event.detail[i].time + ' ';
         var latLng = new google.maps.LatLng(coords[1], coords[0]);
         var tooltip = text;
         var marker = new google.maps.Marker({
             position: latLng,
             map: map,
             zoom: 5,
-            icon: pinSymbol('#1AC8DB'),
+            icon: pinSymbol('#7DF9FF'),
             title: tooltip
         });
         gmarkers.push(marker);
@@ -61,7 +62,7 @@ function printDailyQuakes(event) {
     }
 };
 
-//This is to get data for earthquakes that the user searches for and changes marker color to red.
+//This is to get data for earthquakes that the user searches for and changes marker color to silver.
 function printQuakesBySearch(event) {
     initMap(event.detail[0].coords[1], event.detail[0].coords[0]);
     for (var i = 0; i < event.detail.length; i++) {
@@ -74,8 +75,9 @@ function printQuakesBySearch(event) {
             map: map,
             zoom: 5,
             mapTypeId: 'terrain',
-            icon: pinSymbol('#FF424E'),
+            icon: pinSymbol('rgb(225,173,17)'),
             title: tooltip
+
         });
         gmarkers.push(marker);
         marker.addListener('click', (function (marker, text) {

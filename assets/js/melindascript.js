@@ -63,7 +63,7 @@ function renderQuakesBySearch(event) {
 
 // rendering last five of the past hour quakes and appending it to the html tag
 function renderPastHourQuakes(event) {
-    const quakes = event.detail.slice(0, 5);
+    const quakes = event.detail.slice(0, 3);
     for (let i = 0; i < quakes.length; i++) {
         $('#latestQs')
             .append(createQuakesInfo(quakes[i], i, 'latestQs', 'latest'));

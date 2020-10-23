@@ -1,43 +1,31 @@
-/* Google Font API */
-@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Rubik+Mono+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Lexend+Exa&family=Rubik+Mono+One&display=swap');
+
 
 /* Body Styling with Border Color */
 body {
-    background-color: rgb(215, 252, 251);
-    font-family: 'Lexend Exa', sans-serif;
-    border: 30px solid rgb(219, 134, 134);
-    padding: 30px;
+     background-image: linear-gradient(to right, rgba(11, 67, 79), rgba(20,124,146),  rgba(0,196,204 ),rgba(107,213,227) );
+     font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    font-size: 16px;
 }
 
-/* Image Source: https://pixabay.com/photos/earthquake-seismograph-seismic-wave-3167693/  */
-header {
-    width: 100%;
-}
+
 
 /* Shooketh to the Core */
 header h1 {
     text-align: center;
-    font-family: 'Faster One', cursive;
-    text-shadow: 3px 3px rgb(219, 134, 134);
+    font-family: 'Vollkorn', serif;
+    background-color: #08304B;
+    color: white;
+    border: 10px solid rgb(225,173,17);
 }
 
-header img {
-    border: solid rgb(219, 134, 134);
-    height: auto;
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 /* 5 Most Recent Rumbles */
 h2 {
     text-align: center;
     font-size: x-large;
     vertical-align: text-top;
-    padding: 10px;
-    margin-bottom: 5px;
     font-weight: bold;
 }
 
@@ -50,7 +38,7 @@ h3 {
     padding: 1rem;
     vertical-align: text-top;
     font-weight: bold;
-    border-bottom: dotted rgb(219, 134, 134);
+    border-bottom: dotted black;
     margin: 1rem 0 1rem 0;
 
 }
@@ -77,9 +65,12 @@ em {
     text-align: center;
     font-size: 1rem;
     text-shadow: 2px 2px 7px lightgrey;
-    padding: 5px;
-    font-size: 1rem;
-    background-color: rgb(215, 252, 251);
+    margin-bottom: 5px;
+    background-color:  whitesmoke;
+    border: 10px solid rgb(225,173,17);
+    height: 400 px;
+
+
 }
 
 /* Query Instructions styling */
@@ -124,47 +115,55 @@ em {
     transition: 0s
 }
 
-.quakeQuery, .quakeResults {
+.quakeQuery {
     text-align: center;
     padding: 20px;
     font-size: 1rem;
     background-color: whitesmoke;
     box-sizing: border-box;
-    border: solid rgb(219, 134, 134);
-    height: auto;
-    width: 100%;
+    border: 10px solid rgb(225,173,17);
+    height: 574px;
+    width: 50%;
     margin: 0 0 0.75rem 0;
 }
 
 /* Search Results*/
 .quakeResults {
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    border: 10px solid rgb(225,173,17);
     height: auto;
+    width: 100%;
+    margin: 0 0 0.75rem 0;
 }
 
 /* Most Recent Rumbles */
 .latest {
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 /* Search, Start Over Button Spacing */
 .row {
     grid-column-gap: 1em;
-    grid-row-gap: 1em;
+    grid-row-gap: 20px;
 }
 
 /* Results from Google Map API */
 #map {
     height: 574px;
-    border: solid rgb(219,134,134);
+    border: 10px solid rgb(225,173,17);
     width: 100%;
 }
 
 /* Footer */
 footer {
-    border: solid rgb(219,134,134);
-    color:  rgb(121, 158, 157);
+    border: solid #7DF9FF;
+    color: black;
     background-color: whitesmoke;
     text-align: center;
     height: 50px;
@@ -176,7 +175,7 @@ footer {
     font-weight: bold;
     text-decoration: underline;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
     header h1 {
       font-size: xx-large;
     }

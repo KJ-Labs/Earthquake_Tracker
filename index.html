@@ -6,25 +6,25 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta name='description'content='An earthquake website to help users know what is happening underneath their cities.'>
     <meta name='keywords' content='Earthquake, Maps, API'>
-    <link rel='icon' href='./assets/imgs/favicon.png'>
-    <title>Shooketh Earthquake Tracker</title>
+    <link rel='icon' href='./assets/imgs/favicon.PNG'>
+    <title>Earthquake Tracker</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'>
     <link rel='stylesheet' href='./assets/css/style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <main class='container'>
         <header class='grid-example col'>
             <h1>
-                Shooketh to the Core
+                Earthquake Tracker
             </h1>
-            <img src='assets/imgs/earthquake.jpg' alt='seismic radar and the planet Earth side by side'>
         </header>
-        <!-- This is where the last five earthquakes will display -->
         <section>
-            <div class='col s12 m12 l8'>
+            <div class='col s12 m12 l12'>
                 <div class='lastFive'>
-                    <h2>5 Most Recent Rumbles</h2>
+                    <h2>Most Recent Rumbles</h2>
                     <!-- Put the most recent quake here. The API will provide place, time, and magnitude and append the next most recent for five events total -->
                     <div class='latest' id='latestQs'>
                     </div>
@@ -35,17 +35,17 @@
         <!-- Users can look-up past earthquakes by entering Location, Start & End Dates, and a Radius. If there was an earthquake, it will appear on the map and be listed below map.-->
         <section>
             <div class='row'>
-                <div class='col s12 m12 l6 quakeQuery'>
+                <div class='col s12 m12 l4 quakeQuery'>
                     <h3>Did you feel that?</h3>
-                    <h4>Learn more about earthquakes that happened ANYWHERE!</h4>
+                    <h4>Search For More Earthquakes!</h4>
                     <p>Enter a Location</p>
                     <input type='text' id='location' placeholder='City, State/Province'>
-                    <p>When did it happen?</p>
-                    <em>Start Date</em>
+                    <p>When Did the Earthquake Happen?</p>
+                    <em>What Day Did it Start?</em>
                     <input type='date' id='startDate'>
-                    <em>End Date</em>
+                    <em>What Day Did it End?</em>
                     <input type='date' id='endDate'>
-                    <p>Enter a search Radius</p>
+                    <p>How Far Out Do You Want to Search?</p>
                     <input type='number' id='radius' placeholder='Radius in km'>
                     <div class='row'>
                         <button class='button col s4 push-s1' id='search'>Search</button>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <!-- This is to create the map section and the corresponding search results -->
-                <div class='mapDiv col s12 m12 l6'>
+                <div class='mapDiv col s12 m12 l8'>
                     <div id='map'></div>
                 </div>
             </div>
@@ -72,7 +72,8 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js'></script>
     <script src='./assets/js/melindascript.js'></script>
     <script src='./assets/js/kelseyscript.js'></script>
-    <script defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDjX4meNopLiNIfOqt3YoVAbCGJhM1xP4s&callback=initMap'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjX4meNopLiNIfOqt3YoVAbCGJhM1xP4s&map_ids=e4562264712bec6&libraries=visualization&callback=initMap"></script>
+
 </body>
 
 </html>
