@@ -52,6 +52,6 @@ Kelsey J. Melinda I. Joo H. and Matt W.
 - [Project Repo](https://github.com/KJ-Labs/Earthquake_Tracker)
 
 ## Screenshots
-![Git](screenshot.PNG)  
+![Git](https://github.com/KJ-Labs/Earthquake_Tracker/blob/master/assets/imgs/screenshots.PNG)  
 
 
