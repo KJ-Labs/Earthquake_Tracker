@@ -53,5 +53,5 @@ Kelsey J. Melinda I. Joo H. and Matt W.
 
 ## Screenshots
 ![Git](https://github.com/KJ-Labs/Earthquake_Tracker/blob/master/assets/imgs/screenshots.PNG)  
-
+![Git](https://github.com/KJ-Labs/Earthquake_Tracker/blob/master/Shooketh%20to%20the%20Core.png)  
 
